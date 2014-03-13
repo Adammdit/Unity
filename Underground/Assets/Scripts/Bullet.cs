@@ -1,50 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic; // Add this line, otherwise the List won't work
 
 public class Bullet : MonoBehaviour
 {
     public float bulletSpeed;
-    public float positionX;
-    public float positionY;
 
-    void Start()
+    void Update()
     {
+        transform.Translate(Vector2.up * bulletSpeed * Time.deltaTime);
 
-    }
-
-    void FixedUpdate()
-    {
-
-        transform.position += transform.up * bulletSpeed * Time.deltaTime;
-
-        
-    }
-    // Makes bullet available to shoot again
-    void OnBecameInvisible()
-    {
-        this.gameObject.SetActive(false);
-    }
-    /*
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "robot1")
+        if(transform.position.y < -6)
         {
-            Debug.Log("XXXXXXXXX");
-            //coll.gameObject.SendMessage("ApplyDamage", 10);
-            Destroy(coll.gameObject); // destroys enemy
-            
+            Destroy(gameObject);
         }
     }
-     
-
-    void OnCollisionEnter2D()
-    {
-        rigidbody2D.velocity = Vector2.zero;
-        bulletSpeed = 0f;
-        transform.Translate(Vector2.zero);
-    }
-    */
-
-
-
 }
