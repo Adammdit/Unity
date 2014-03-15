@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Laser.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Laser.cs" Line="36" Column="1" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="13" Column="11" />
+      <File FileName="Assets\Scripts\Robot1.cs" Line="33" Column="37" />
+      <File FileName="Assets\Scripts\Robot2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpawnEnemies.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

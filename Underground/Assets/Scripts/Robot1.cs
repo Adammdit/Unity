@@ -17,28 +17,21 @@ public class Robot1 : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Raycasting();
-
 	    if (livePoints < 1)
         {
             Destroy(gameObject);
         }
 	}
 
-    void Raycasting()
-    {           
+    void OnMouseOver()
+    {
         if (Input.GetMouseButtonDown(0)) // 0 means left click
         {
-            RaycastHit2D obsticle = Physics2D.Linecast(transform.position, go.transform.position, layerMaskWall);         
-            RaycastHit2D hitRobot = Physics2D.Raycast(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            if (hitRobot && !obsticle)
-            {                
-                if (hitRobot.collider.gameObject.tag == "Enemie")
-                {
-                    Debug.Log("Target Position: " + hitRobot.collider.gameObject.transform.position);
-                    livePoints -= 20;
-                }               
+            RaycastHit2D obsticle = Physics2D.Linecast(transform.position, go.transform.position, layerMaskWall);
+            if (!obsticle)
+            {
+                livePoints -= 20;   
             }
-        }         
+        }
     }
 }
