@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour 
 {
     public static int playerScore = 0;
+    public static int health = 100;
     public int playerLives = 3;
     private bool flag = true;
 
@@ -43,4 +44,13 @@ public class Player : MonoBehaviour
             flag = true;
         }
 	}
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Enemie")
+        {
+            health -= 10;
+
+        }
+    }
 }
