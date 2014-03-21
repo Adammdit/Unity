@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: d1c9d120554f8e342bd1c59495365a08
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - go: {instanceID: 0}
+  - fireAudio: {fileID: 8300000, guid: adf01878961b0e042a9089c686168e6d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

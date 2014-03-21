@@ -22,8 +22,16 @@ public class Laser : MonoBehaviour
         // Change rotation to Player rotation
         transform.rotation = go.transform.rotation;
         // Offset the laser position that it's comming out of the gun position
-        transform.Translate(Vector2.right * -16 * Time.deltaTime);
-        transform.Translate(Vector2.up * 10 * Time.deltaTime);
+        if(Player.pistol)
+        {
+            transform.Translate(Vector2.right * -16 * Time.deltaTime);
+            transform.Translate(Vector2.up * 10 * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector2.right * -5 * Time.deltaTime);
+        }
+        
         RaycastHit2D hit = Physics2D.Raycast(transform.position, ((Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized), 1000, mask);
         lineRenderer.SetPosition(0, transform.position);
         if (hit)
