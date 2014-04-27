@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AmmoShotgun : MonoBehaviour {
-
+public class AmmoShotgun : MonoBehaviour 
+{
     private bool flag = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+	// Triggers sound adds ammo and destroy it self
     void OnCollisionEnter2D()
     {
         if (!flag)

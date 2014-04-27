@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: a2e88bbdb0558af44a4099260f8e9161
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - clipDie: {fileID: 8300000, guid: a24980ec60b1a2240abd8e2d5a2a9af7, type: 3}
+  - clipHit: {fileID: 8300000, guid: 6f64be6e0c5c123418aa4d16f8b08851, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

@@ -18,25 +18,25 @@ public class Robot1 : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-
     // Update is called once per frame
     void Update()
     {
+		// Checks if lifePoints are grater than 0 and triggers different animations
         if (livePoints < 1)
         {
             if (!soundplayed)
             {
+                Player.playerScore += 50;
                 audio.Play();
                 soundplayed = true;
             }
             anim.SetBool("Die", true);
-
             Destroy(gameObject, 0.75f);
         }
         else
         {
             anim.SetBool("Die", false);
-            // Raycast against players layer
+            // Raycast against player layer
             RaycastHit2D hit = Physics2D.Raycast(transform.position, (player.transform.position - transform.position).normalized, 10, targetLayer);
             if (hit)
             {               
@@ -61,6 +61,8 @@ public class Robot1 : MonoBehaviour
 
     void OnMouseOver()
     {
+		// Enemy raycasting against player and checks is there any obsticles on the line.
+		// Obsticles are represented by mask combined out of three different layers.
         RaycastHit2D obsticle = Physics2D.Linecast(transform.position, player.transform.position, mask);
         if (Input.GetMouseButtonDown(0) && Player.pistol && Player.ammoPistol > 0) // 0 means left click
         {
@@ -84,12 +86,12 @@ public class Robot1 : MonoBehaviour
         }
     }
 
+	// On collision with player triggers animation
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
             anim.SetBool("Touch", true);
-            //Player.playerHealth -= 50;
             Destroy(gameObject, 1);
         }
     }

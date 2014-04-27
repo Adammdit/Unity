@@ -1,12 +1,33 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Laser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Shotgun.cs">
     <Files>
-      <File FileName="Assets\Scripts\Laser.cs" Line="36" Column="1" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="13" Column="11" />
-      <File FileName="Assets\Scripts\Robot1.cs" Line="33" Column="37" />
-      <File FileName="Assets\Scripts\Robot2.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SpawnEnemies.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AmmoPistol.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\GameMenu.cs" Line="10" Column="32" />
+      <File FileName="Assets\Scripts\Player.cs" Line="55" Column="17" />
+      <File FileName="Assets\Scripts\CursorIcon.cs" Line="12" Column="64" />
+      <File FileName="Assets\Scripts\Laser.cs" Line="40" Column="25" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="2" Column="26" />
+      <File FileName="Assets\Scripts\HUDpistol.cs" Line="14" Column="3" />
+      <File FileName="Assets\Scripts\HUDShotgun.cs" Line="7" Column="47" />
+      <File FileName="Assets\Scripts\PlayerControl.cs" Line="16" Column="28" />
+      <File FileName="Assets\Scripts\HUDhealth.cs" Line="41" Column="32" />
+      <File FileName="Assets\Scripts\HUDpicture.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\Enemies\Robot2.cs" Line="91" Column="1" />
+      <File FileName="Assets\Scripts\MainMenu.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\ScreenFrame.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\Interface.cs" Line="6" Column="51" />
+      <File FileName="Assets\Scripts\Enemies\SpawnEnemies.cs" Line="70" Column="46" />
+      <File FileName="Assets\Scripts\HUDframe.cs" Line="9" Column="48" />
+      <File FileName="Assets\Scripts\AmmoPistol.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\AmmoShotgun.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\GameRestart.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\GameResume.cs" Line="35" Column="6" />
+      <File FileName="Assets\Scripts\HUDscore.cs" Line="9" Column="46" />
+      <File FileName="Assets\Scripts\MainCamera.cs" Line="18" Column="81" />
+      <File FileName="Assets\Scripts\Enemies\Robot1.cs" Line="94" Column="41" />
+      <File FileName="Assets\Scripts\Enemies\Robot3.cs" Line="48" Column="78" />
+      <File FileName="Assets\Scripts\Shotgun.cs" Line="8" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

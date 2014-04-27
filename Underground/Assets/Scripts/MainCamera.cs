@@ -15,7 +15,7 @@ public class MainCamera : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    // Update is called once per frame
+    // Used for smooth transition of the camera in case player is over lift area
     void FixedUpdate()
     {
         if (player.transform.position.x > 16 && player.transform.position.y < 11)
@@ -33,5 +33,5 @@ public class MainCamera : MonoBehaviour
             posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref velocity.y, smoothTime);
             transform.position = new Vector3(posX, posY, -10f);
         }        
-    }    
+    }  
 }

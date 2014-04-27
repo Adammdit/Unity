@@ -21,10 +21,12 @@ public class Robot2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		// Checks if lifePoints are grater than 0 and triggers different animations
         if (livePoints < 1)
         {
             if (!soundplayed)
             {
+                Player.playerScore += 10;
                 audio.Play();
                 soundplayed = true;
             }
@@ -48,7 +50,7 @@ public class Robot2 : MonoBehaviour
                     transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 }
                 // Move towards player
-                Debug.DrawLine(transform.position, player.transform.position);
+                // Debug.DrawLine(transform.position, player.transform.position);
                 transform.Translate((player.transform.position + transform.position).normalized * maxSpeed * Time.deltaTime);
             }
             else
@@ -60,6 +62,8 @@ public class Robot2 : MonoBehaviour
 
     void OnMouseOver()
     {
+		// Enemy raycasting against player and checks is there any obsticles on the line.
+		// Obsticles are represented by mask combined out of three different layers.
         RaycastHit2D obsticle = Physics2D.Linecast(transform.position, player.transform.position, mask);
         if (Input.GetMouseButtonDown(0) && Player.pistol && Player.ammoPistol > 0) // 0 means left click
         {

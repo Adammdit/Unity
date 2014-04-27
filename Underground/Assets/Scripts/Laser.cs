@@ -31,11 +31,12 @@ public class Laser : MonoBehaviour
         {
             transform.Translate(Vector2.right * -5 * Time.deltaTime);
         }
-        
+        // Raycast laser line from player to cursor
         RaycastHit2D hit = Physics2D.Raycast(transform.position, ((Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized), 1000, mask);
         lineRenderer.SetPosition(0, transform.position);
         if (hit)
-        {           
+        {  
+			// If obsticle draw from player to place of collision (endPoint)
 			endPoint = hit.point;
 			lineRenderer.SetPosition(1, endPoint);           
         }

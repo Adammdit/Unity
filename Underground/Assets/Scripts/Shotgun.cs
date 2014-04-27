@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Shotgun : MonoBehaviour {
-
+public class Shotgun : MonoBehaviour 
+{
     private bool flag = false;
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
+	// Triggers audio, add ammo, destroy
     void OnCollisionEnter2D()
     {
         if (!flag)

@@ -5,7 +5,6 @@ public class PlayerControl : MonoBehaviour
 {	
 	public float maxSpeed = 3f;
     private float moveX, moveY, angle;
-	//Transform playerTransform = player.transform;
 	Animator anim;
 	
 	// Use this for initialization
@@ -14,7 +13,7 @@ public class PlayerControl : MonoBehaviour
 		anim = GetComponent<Animator> ();
 	}
 
-	// Update is called once per frame
+	// Defines player movement
 	void FixedUpdate () 
 	{       
 		moveX = Input.GetAxis("Horizontal");
@@ -36,7 +35,7 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // 0 means left click
+        if (Input.GetMouseButtonDown(0) && !Player.shootingBlocked) // 0 means left click
         {
             anim.SetBool("Trigger", true);
         }
